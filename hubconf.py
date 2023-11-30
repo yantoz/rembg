@@ -37,7 +37,6 @@ class _rembg():
         else:
             providers = None
         session = new_session(model_name=model, providers=providers)
-        log.debug("Running with: {}".format(session.inner_session.get_providers()))
         output = remove(image, session=session, **kwargs)
 
         # combine alpha channel
